@@ -13,7 +13,7 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background: url("../imgs/Fondo.jpg");
+    background: url("../imgs/fondo.jpg");
     background-size: cover;
     background-position: center;
     height: auto;
@@ -69,16 +69,44 @@ blockquote{
 article{
     display: grid;
     grid-template-areas:
-    "hgroup"
-    "figure"
-    "p"
-    "footer";
+    "hgroup hgroup"
+    "figure p"
+    "footer footer" ;
+    grid-template-columns: 400px auto;
+    height: auto;
 }
 hgroup{
     grid-area: hgroup;
     text-align: center;
     background-color: #222;
+    height: auto;
 }
 figure{
+    display: grid;
+    grid-template-areas:
+    "img"
+    "figcaption";
     grid-area:figure;
+    background: red;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    padding: 1em;
+    height: 40em;
+}
+figure img{
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+}
+figure figcaption{
+    grid-area: figcaption;
+}
+section p{
+    grid-area:p;
+    font-size: 1em;
+}
+footer{
+    grid-area: footer;
 }
