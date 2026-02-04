@@ -63,22 +63,27 @@ section{
     grid-area: section;
 }
 blockquote{
+    text-align: center;
     position: sticky;
     top:0;
 }
 article{
     display: grid;
+    background: #222;
     grid-template-areas:
     "hgroup hgroup"
     "figure p"
     "footer footer" ;
     grid-template-columns: 400px auto;
     height: auto;
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em;
 }
 hgroup{
     grid-area: hgroup;
     text-align: center;
-    background-color: #222;
+    background-color: #c0c0c0;
     height: auto;
 }
 figure{
@@ -92,7 +97,7 @@ figure{
     align-items: center;
     border-radius: 2em;
     padding: 1em;
-    height: 40em;
+    margin:1em;
 }
 figure img{
     grid-area: img;
@@ -102,11 +107,26 @@ figure img{
 }
 figure figcaption{
     grid-area: figcaption;
+    text-align: center;
+    font-size: 1em;
 }
 section p{
     grid-area:p;
     font-size: 1em;
 }
-footer{
+section footer{
     grid-area: footer;
+    text-align: center;
+    font-size: 1em;
+}
+section footer p a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+section footer p a:hover{
+    color: red;
+}
+section p{
+    font-size: 1em;
 }
