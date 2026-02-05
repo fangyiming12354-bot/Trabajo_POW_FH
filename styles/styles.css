@@ -22,10 +22,10 @@ header {
 }
 header h1 {
     margin-bottom: 10px;
-    font-size: 3em;
+    font-size: 3rem;
 }
 header p {
-    font-size: 1em;
+    font-size: 1rem;
     color: #ccc;
 }
 nav ul {
@@ -51,40 +51,88 @@ nav a:hover {
 main{
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 16rem 1fr 16rem;
     grid-template-areas:
-    "aside section";
-    gap: 20px;
+    "aside1 section aside2";
+    gap: 2rem;
 }
-aside{
-    grid-area:aside;
+
+.aside-top{
+    grid-area:aside1;
+    padding: 2rem;
+}
+.aside-button{
+    grid-area:aside2;
+    padding: 2rem;
 }
 section{
     grid-area: section;
+    display:grid;
+    grid-template-areas:
+    "article1 article2"
+    "article3 article4";
+
 }
 blockquote{
+    font-size: 1rem;
     text-align: center;
     position: sticky;
-    top:0;
+    top:3rem;
+    background: #222;
+    border: white solid 0.1rem;
+    justify-items: center;
+    align-content: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+blockquote img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 1rem;
+    margin: auto;
+}
+.article1{
+    grid-area: article1;
+}
+.article2{
+    grid-area: article2;
+}
+.article3{
+    grid-area: article3;
+}
+.article4{
+    grid-area: article4;
 }
 article{
     display: grid;
     background: #222;
+    border:white solid 0.1rem;
     grid-template-areas:
     "hgroup hgroup"
     "figure p"
     "footer footer" ;
-    grid-template-columns: 400px auto;
+    grid-template-columns: 1fr 1fr;
     height: auto;
-    border-radius: 2em;
-    padding: 2em;
-    margin: 2em;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem;
 }
 hgroup{
     grid-area: hgroup;
     text-align: center;
-    background-color: #c0c0c0;
+    background-color: rgba(192, 192, 192, 0.308);
     height: auto;
+    border-radius: 1rem;
+    font-size: 1rem;
 }
 figure{
     display: grid;
@@ -92,41 +140,56 @@ figure{
     "img"
     "figcaption";
     grid-area:figure;
-    background: red;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2em;
-    padding: 1em;
-    margin:1em;
+    background:rgba(73, 114, 131, 0.342);
+    justify-items: center;
+    align-content: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
 }
 figure img{
     grid-area: img;
-    width: 100%;
-    height: 100%;
-    border-radius: 1em;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 1rem;
+    margin: auto;
 }
 figure figcaption{
     grid-area: figcaption;
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
 }
-section p{
+.information{
     grid-area:p;
-    font-size: 1em;
+    background-color: rgba(73, 114, 131, 0.342);
+    font-size: 1rem;
+    padding: 2rem;
+    margin:1rem;
+    border-radius: 1rem;
+
 }
 section footer{
     grid-area: footer;
     text-align: center;
-    font-size: 1em;
+    background: rgba(192, 192, 192, 0.308);
+    font-size: 1rem;
+    border-radius: 1rem;
 }
 section footer p a{
     color: white;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1rem;
 }
 section footer p a:hover{
     color: red;
 }
-section p{
-    font-size: 1em;
-}
+
+
